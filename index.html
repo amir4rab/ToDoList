@@ -1,62 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Find my Ip</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="images/favicon.svg" type="image/svg">
-        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To do list</title>
+</head>
+<body class="">
+    <nav class="t-nav">
+        <div class="t-nav-brand">
+            To Do List
+        </div>
+    </nav>
+    <div>
+        <div id="injectSection" class="container">
+            <div class="input-section">
+                <div class="input-group" style="position: relative;">
+                    <label id="titleLable">Task Title</label>
+                    <input id="titleInput" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Task</label>
+                    <input id="taskInput" type="text">
+                </div>
+                <button id="submitBtn">Submit</button>
+            </div>
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-title">
+                                Title
+                            </th>
+                            <th class="th-task">
+                                Task
+                            </th>
+                            <th class="th-btn">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="style.css">
-
-    </head>
-    <body class="bgImg" scroll="no">
-        <div class="nav">
-            Find my Ip
-        </div>
-        <div class="container">
-            <div style="display: flex; justify-content: center;align-items: center; flex-wrap: wrap;">
-                <div class="card" style="flex-grow:2;">
-                    <div class="cardBody">
-                        <div class="mainText">
-                            <p id="ipAddress">Your ip Address:</p>
-                            <p id="country">Your country:</p>
-                            <p id="isp">Your Isp:</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="flex-grow:1;" >
-                    <div class="cardBody">
-                        <div class="secText">
-                            <p id="city">City: </p>
-                            <p id="zipCode">Zip-code:</p>
-                            <p id="lat">Lat:</p>
-                            <p id="lon">Lon:</p>
-                        </div>
-                    </div>
-                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+                        <tr>
+                            <td class="t-title">
+                                Get A Life!
+                            </td>
+                            <td class="t-task">
+                                Start a Careare!! Get A Life!
+                            </td>
+                            <td class="t-btn"> 
+                                <button class="done-btn">Done</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-title">
+                                Get A Life!
+                            </td>
+                            <td class="t-task">
+                                Start a Careare!! Get A Life!
+                            </td>
+                            <td class="t-btn"> 
+                                <button class="done-btn">Done</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr class="done">
+                            <td class="t-title">
+                                Get A Life!
+                            </td>
+                            <td class="t-task">
+                                Start a Careare!! Get A Life!
+                            </td>
+                            <td class="t-btn"> 
+                                <button class="done-btn">Done</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="card">
-                <div class="cardBody" style="padding: 0px; margin: 0rem 0rem 2.5rem 0rem;">
-                    <img class="mapImg" id="map" src="" alt="yourlocation">
-                </div>
-            </div>
         </div>
-        <div class="container" style="margin-bottom: 5rem;">
-            <div class="card">
-                <div class="cardBody">
-                    <h2>about</h2>
-                    <p>Ip data is porvided by <a href="https://ipapi.co/" target="_">ipapi.co</a></p>
-                    <p>Map image porvided by <a href="https://www.mapbox.com/" target="_">mapbox.com</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            Codded with 💙 by <a href="https://github.com/amir4rab" target="_">Amir4arab</a>
-        </div>
-        <!-- JavaScript -->
-        <script src="app.js"></script>
-    </body>
+    </div>
+    <nav class="b-nav">
+        <a id="settingLink">
+            <span class="material-icons">settings</span>
+            <span>Settings</span>
+        </a>
+        <a id="homeLink" class="b-nav-active">
+            <span class="material-icons">home</span>
+            <span>Home</span>
+        </a>
+        <a id="aboutLink">
+            <span class="material-icons">info</span>
+            <span>About</span>
+        </a>
+    </nav>
+    <script src="app.js"></script>
+</body>
 </html>
