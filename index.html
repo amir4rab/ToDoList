@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To do list</title>
+</head>
+<body class="">
+    <nav class="t-nav">
+        <div class="t-nav-brand">
+            To Do List
+        </div>
+    </nav>
+    <div>
+        <div id="injectSection" class="container">
+            <div class="input-section">
+                <div class="input-group" style="position: relative;">
+                    <label id="titleLable">Task Title</label>
+                    <input id="titleInput" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Task</label>
+                    <input id="taskInput" type="text">
+                </div>
+                <button id="submitBtn">Submit</button>
+            </div>
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-title">
+                                Title
+                            </th>
+                            <th class="th-task">
+                                Task
+                            </th>
+                            <th class="th-btn">
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+                        <tr>
+                            <td class="t-title">
+                                Get A Life!
+                            </td>
+                            <td class="t-task">
+                                Start a Careare!! Get A Life!
+                            </td>
+                            <td class="t-btn"> 
+                                <button class="done-btn">Done</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-title">
+                                Get A Life!
+                            </td>
+                            <td class="t-task">
+                                Start a Careare!! Get A Life!
+                            </td>
+                            <td class="t-btn"> 
+                                <button class="done-btn">Done</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr class="done">
+                            <td class="t-title">
+                                Get A Life!
+                            </td>
+                            <td class="t-task">
+                                Start a Careare!! Get A Life!
+                            </td>
+                            <td class="t-btn"> 
+                                <button class="done-btn">Done</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <nav class="b-nav">
+        <a id="settingLink">
+            <span class="material-icons">settings</span>
+            <span>Settings</span>
+        </a>
+        <a id="homeLink" class="b-nav-active">
+            <span class="material-icons">home</span>
+            <span>Home</span>
+        </a>
+        <a id="aboutLink">
+            <span class="material-icons">info</span>
+            <span>About</span>
+        </a>
+    </nav>
+    <script src="app.js"></script>
+</body>
+</html>
