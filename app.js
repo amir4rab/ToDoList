@@ -4,19 +4,7 @@ class DataManager{
     static S_initData(){
         if(window.localStorage.getItem(`toDoList`) === null){
             const data = {
-                "Data":[
-                    {
-                        "title":"Done",
-                        "task":"make an app",
-                        "isDone": true
-                    
-                    },
-                    {
-                        "title":"no done",
-                        "task":"Get a Life!",
-                        "isDone": false
-                    }
-                ],
+                "Data":[],
                 "setting":{
                     "theme": "default"
                 }
@@ -27,6 +15,16 @@ class DataManager{
         }else{
             return JSON.parse(window.localStorage.getItem(`toDoList`));
         }
+    }
+    static S_ClearAll(){
+        const data = {
+            "Data":[],
+            "setting":{
+                "theme": "default"
+            }
+        };
+        const sData = JSON.stringify(data)
+        window.localStorage.setItem(`toDoList`, sData);
     }
     static S_getAllData(){
         return JSON.parse(window.localStorage.getItem(`toDoList`));
@@ -162,6 +160,10 @@ class Ui{
                 const defaultThemeBtn = document.getElementById("defaultThemeBtn");
                 defaultThemeBtn.addEventListener('click',()=>Ui.S_setTheme("default"));
                 DataManager.S_getAllData().setting.theme === "default"? defaultThemeBtn.checked = true : darkThemeBtn.checked = true;
+                document.getElementById("deleteAll").addEventListener('click',()=>{
+                    DataManager.S_ClearAll();
+                    location.reload();
+                })
             }
             const html = `<div class="card">
             <div class="card-title">Setting</div>
@@ -184,7 +186,7 @@ class Ui{
                         Delete App Data
                     </div>
                     <div class="about-b">
-                        <button class="delete-btn">
+                        <button id="deleteAll" class="delete-btn">
                             Delete All Data
                         </button>
                     </div>
@@ -206,7 +208,7 @@ class Ui{
             <div class="card-title">About</div>
             <div class="card-body">
                 <div class="about-b" style="max-width: 100%;margin:auto;text-align: center;">
-                    This is a free brower base <a>To Do List</a>, feel free to look at the code at <a target="_" href="">Github</a>, codded 💙 love by <a target="_" href="https://github.com/amir4rab">Amir4rab</a>.
+                    This is a free brower base <a>To Do List</a>, feel free to look at the code at <a target="_" href="https://github.com/amir4rab/ToDoList">Github</a>, codded with 💙 love by <a target="_" href="https://github.com/amir4rab">Amir4rab</a>.
                 </div>
             </div>
         </div>
@@ -215,7 +217,7 @@ class Ui{
             <div class="card-body">
                 <div class="about-group">
                     <div class="about-t">
-                        crator
+                        Programer
                     </div>
                     <div class="about-b">
                         <a target="_" href="https://github.com/amir4rab">Amir4rab</a>
